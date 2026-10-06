@@ -2,11 +2,53 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nota Fiscal</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Menu Principal - Sistema</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .menu-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 { margin-bottom: 20px; color: #333; }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    
+
+<div class="menu-container">
+    <h2>Menu do Sistema</h2>
+    <a href="cad_usuario.html" class="btn">Cadastro de Usuário</a>
+    <a href="cad_cliente.html" class="btn">Cadastro de Cliente</a>
+    <a href="cad_produto.html" class="btn">Cadastro de Produto</a>
+    <a href="cad_nota.html" class="btn">Cadastro de Nota</a>
+    <a href="cad_item_nota.html" class="btn">Cadastro de Item da Nota</a>
+</div>
+
 </body>
 </html>

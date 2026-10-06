@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Emissão de Nota Fiscal</title>
+</head>
+<body>
+    <h2>Emitir Nota Fiscal</h2>
+    <form action="/emitir-nota" method="POST">
+        <!-- Dados da tb_nota -->
+        <h3>Dados da Nota</h3>
+        <label for="cliente">Cliente (CNPJ):</label><br>
+        <select id="cliente" name="fk_nr_cnpj" required>
+            <option value="">Selecione um cliente...</option>
+            <!-- Opções carregadas dinamicamente do banco de dados -->
+            <option value="12345678000199">12345678000199 - Empresa Exemplo LTDA</option>
+        </select><br><br>
+
+        <label for="dt_emissao">Data de Emissão:</label><br>
+        <input type="date" id="dt_emissao" name="dt_emissao" required><br><br>
+
+        <label for="dt_envio">Data de Envio:</label><br>
+        <input type="date" id="dt_envio" name="dt_envio"><br><br>
+
+        <hr>
+
+        <!-- Dados da tb_produto_has_tb_nota (Itens da Nota) -->
+        <h3>Itens da Nota</h3>
+        <div id="container-itens">
+            <div class="item-linha">
+                <label for="produto">Produto:</label>
+                <select name="produtos[]" required>
+                    <option value="">Selecione o produto...</option>
+                    <!-- Opções carregadas do banco de dados -->
+                    <option value="1">Caneta Azul (R$ 2.50)</option>
+                </select>
+
+                <label for="quantidade">Qtd:</label>
+                <input type="number" name="quantidades[]" min="1" required>
+            </div>
+        </div><br>
+
+        <button type="button" onclick="adicionarLinha()">+ Adicionar outro produto</button>
+        <br><br>
+
+        <button type="submit">Gravar e Emitir Nota</button>
+    </form>
+
+    <script>
+        // Função simples para permitir adicionar mais de um produto na mesma nota
+        function adicionarLinha() {
+            const container = document.getElementById('container-itens');
+            const novaLinha = container.firstElementChild.cloneNode(true);
+            // Limpa os valores dos campos clonados
+            novaLinha.querySelectorAll('input, select').forEach(input => input.value = "");
+            container.appendChild(novaLinha);
+        }
+    </script>
+</body>
+</html>
