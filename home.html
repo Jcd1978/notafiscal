@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -120,6 +120,62 @@
         <div class="footer-links">
             <a href="#">Esqueceu sua senha?</a>
         </div>
+    </div>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+</head>
+<body>
+
+    <!-- Seção de Login -->
+    <div class="login-container">
+        <h2>Entrar na Conta</h2>
+        <form action="/login" method="POST">
+            <div>
+                <label for="login-email">E-mail</label>
+                <input type="email" id="login-email" name="email" required autocomplete="email">
+            </div>
+
+            <div>
+                <label for="login-senha">Senha</label>
+                <input type="password" id="login-senha" name="senha" required autocomplete="current-password">
+            </div>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Seção de Cadastro -->
+    <div class="cadastro-container">
+        <h2>Criar Nova Conta</h2>
+        <form action="/cadastro" method="POST">
+            <div>
+                <label for="cadastro-nome">Nome Completo</label>
+                <input type="text" id="cadastro-nome" name="nome" required autocomplete="name">
+            </div>
+
+            <div>
+                <label for="cadastro-email">E-mail</label>
+                <input type="email" id="cadastro-email" name="email" required autocomplete="email">
+            </div>
+
+            <div>
+                <label for="cadastro-senha">Senha</label>
+                <input type="password" id="cadastro-senha" name="senha" required autocomplete="new-password">
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
     </div>
 
 </body>
