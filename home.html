@@ -1,182 +1,23 @@
-<!--
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Login</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f6f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .login-container {
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 24px;
-            color: #333333;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #666666;
-            font-size: 14px;
-        }
-
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cccccc;
-            border-radius: 4px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .input-group input:focus {
-            border-color: #007bff;
-        }
-
-        .btn-login {
-            width: 100%;
-            padding: 12px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .btn-login:hover {
-            background-color: #0056b3;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .footer-links a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Home - Painel Principal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="login-container">
-        <h2>Entrar</h2>
-        <form action="/login-endpoint" method="POST">
-            
-            <!-- Campo de Usuário/Email -->
-            <div class="input-group">
-                <label for="username">Usuário ou E-mail</label>
-                <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
-            </div>
-
-            <!-- Campo de Senha -->
-            <div class="input-group">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-            </div>
-
-            <!-- Botão de Envio -->
-            <button type="submit" class="btn-login">Acessar</button>
-
-        </form>
-
-        <div class="footer-links">
-            <a href="#">Esqueceu sua senha?</a>
+    <div class="container">
+        <h1>Painel de Controle (Home)</h1>
+        <p style="text-align: center; color: #666;">Selecione uma opção de gerenciamento:</p>
+        
+        <div class="nav-links">
+            <a href="cad_cliente.html" class="btn">Gerenciar Clientes</a>
+            <a href="cad_produto.html" class="btn">Gerenciar Produtos</a>
+            <a href="cad_nota.html" class="btn">Emitir Nota Fiscal</a>
+            <a href="cad_item_nota.html" class="btn">Adicionar Itens à Nota</a>
+            <hr style="width:100%; border: 0; border-top: 1px solid #ccc; margin: 15px 0;">
+            <a href="index.html" style="color: red;">Sair / Logoff</a>
         </div>
     </div>
-
-</body>
-</html>
--->
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login e Cadastro</title>
-</head>
-<body>
-
-    <!-- Seção de Login -->
-    <div class="login-container">
-        <h2>Entrar na Conta</h2>
-        <form action="/login" method="POST">
-            <div>
-                <label for="login-email">E-mail</label>
-                <input type="email" id="login-email" name="email" required autocomplete="email">
-            </div>
-
-            <div>
-                <label for="login-senha">Senha</label>
-                <input type="password" id="login-senha" name="senha" required autocomplete="current-password">
-            </div>
-
-            <button type="submit">Entrar</button>
-        </form>
-    </div>
-
-    <hr>
-
-    <!-- Seção de Cadastro -->
-    <div class="cadastro-container">
-        <h2>Criar Nova Conta</h2>
-        <form action="/cadastro" method="POST">
-            <div>
-                <label for="cadastro-nome">Nome Completo</label>
-                <input type="text" id="cadastro-nome" name="nome" required autocomplete="name">
-            </div>
-
-            <div>
-                <label for="cadastro-email">E-mail</label>
-                <input type="email" id="cadastro-email" name="email" required autocomplete="email">
-            </div>
-
-            <div>
-                <label for="cadastro-senha">Senha</label>
-                <input type="password" id="cadastro-senha" name="senha" required autocomplete="new-password">
-            </div>
-
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
-
 </body>
 </html>

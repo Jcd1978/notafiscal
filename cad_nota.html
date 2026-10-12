@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Nota</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Emitir Nota Fiscal</h2>
+        <form action="#" method="post">
+            <label for="nota_numero">Número da Nota:</label>
+            <input type="number" name="nota_numero" id="nota_numero" required>
+
+            <label for="nota_data">Data de Emissão:</label>
+            <input type="date" name="nota_data" id="nota_data" required>
+
+            <label for="nota_cliente_id">ID do Cliente:</label>
+            <input type="text" name="nota_cliente_id" id="nota_cliente_id" required>
+
+            <button type="submit">Criar Nota</button>
+        </form>
+        <div class="nav-links">
+            <a href="cad_item_nota.html">Próximo Passo: Adicionar Itens</a>
+            <a href="home.html">Voltar para Home</a>
+        </div>
+    </div>
+</body>
+</html>
