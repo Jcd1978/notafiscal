@@ -26,7 +26,7 @@ try{
    $insert->bind_param("iiid", $cd_produto, $cd_nota, $qt, $vl_total_item);
    $insert->execute();
 
-    header("Location: ../obrigado.html");
+    header("Location: ../cad_item_nota.html");
     exit;
 
     } catch (mysqli_sql_exception $e) {

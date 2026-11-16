@@ -14,7 +14,7 @@ $insert = $conexao->prepare(
 $insert->bind_param("ssss", $cnpj, $razao, $pais, $email);
  
 if ($insert->execute()) {
-    header("Location: ../obrigado.html");
+    header("Location: ../cad_cliente.html");
 } else {
     echo "<script>alert('Erro ao cadastrar cliente'); history.back();</script>";
 }

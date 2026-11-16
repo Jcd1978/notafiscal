@@ -14,7 +14,7 @@ $insert = $conexao->prepare(
 $insert->bind_param("ss", $nome, $valor);
  
 if ($insert->execute()) {
-    header("Location: ../obrigado.html");
+    header("Location: ../cad_produto.html");
 } else {
     echo "<script>alert('Erro ao cadastrar produto'); history.back();</script>";
 }

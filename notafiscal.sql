@@ -2,7 +2,7 @@ create database notafiscal;
 use notafiscal;
 
 create table tb_usuario(
-id_usuario int primary key,
+id_usuario int primary key auto_increment,
 nm_usuario varchar (50),
 email varchar(60),
 senha text

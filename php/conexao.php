@@ -8,7 +8,7 @@ $banco = 'notafiscal';
 
 // Conectando no banco via mysqli
 try{
-    $conexao = new mysqli($host, $usuario, $senha, $banco, 3307);
+    $conexao = new mysqli($host, $usuario, $senha, $banco);
 } catch (mysqli_sql_exception $e) {
     die('Erro na conexão: ' . $e->getMessage());
 }

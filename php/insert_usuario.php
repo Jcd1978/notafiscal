@@ -1,9 +1,9 @@
 <?php
 include 'conexao.php';
 
-$nome = $_POST['cad_usuario_nome'];
-$email = $_POST['cad_usuario_email'];
-$senha = $_POST['cad_usuario_senha'];
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
 
 $insert = $conexao->prepare(
     "INSERT INTO tb_usuario (nm_usuario, email, senha) VALUES (?, ?, ?)"

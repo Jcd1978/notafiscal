@@ -15,7 +15,7 @@ try {
     $insert->bind_param("ssds", $dt_emissao, $dt_envio, $vl_total, $cnpj);
     $insert->execute();
 
-    header("Location: ../obrigado.html");
+    header("Location: ../cad_nota.html");
     exit;
 
 } catch (mysqli_sql_exception $e) {
