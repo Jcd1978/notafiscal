@@ -1,17 +1,16 @@
 <?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 // Definindo as variáveis usadas na conexão
-$host = "localhost";
-$banco = "notafiscal";
-$usuario = "root";
-$senha = "Jcmd@1978";
+$host = 'localhost';
+$usuario = 'root';
+$senha = '';
+$banco = 'notafiscal';
 
 // Conectando no banco via mysqli
-$conexao = new mysqli($host, $usuario, $senha, $banco);
-
-// Verifica se houve erro na conexão
-if ($conexao->connect_error) {
-    die("Falha na conexão: " . $conexao->connect_error);
+try{
+    $conexao = new mysqli($host, $usuario, $senha, $banco, 3307);
+} catch (mysqli_sql_exception $e) {
+    die('Erro na conexão: ' . $e->getMessage());
 }
-
-echo "Conectado com sucesso!";
 ?>
+

@@ -1,5 +1,12 @@
-create database db_notas;
-use db_notas;
+create database notafiscal;
+use notafiscal;
+
+create table tb_usuario(
+id_usuario int primary key,
+nm_usuario varchar (50),
+email varchar(60),
+senha text
+);
 
 
 create table tb_cliente (

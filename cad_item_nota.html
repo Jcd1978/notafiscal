@@ -8,15 +8,15 @@
 <body>
     <div class="container">
         <h2>Adicionar Item à Nota</h2>
-        <form action="#" method="post">
-            <label for="item_nota_numero">Número da Nota:</label>
-            <input type="number" name="item_nota_numero" id="item_nota_numero" required>
+        <form action="php/insert_item.php" method="post">
+            <label for="cd_nota">Número da Nota:</label>
+            <input type="number" name="cd_nota" id="cd_nota" required>
 
-            <label for="item_produto_id">ID do Produto:</label>
-            <input type="text" name="item_produto_id" id="item_produto_id" required>
+            <label for="cd_produto">ID do Produto:</label>
+            <input type="number" name="cd_produto" id="cd_produto" required>
 
-            <label for="item_quantidade">Quantidade:</label>
-            <input type="number" name="item_quantidade" id="item_quantidade" min="1" required>
+            <label for="qt">Quantidade:</label>
+            <input type="number" name="qt" id="qt" min="1" required>
 
             <button type="submit">Adicionar Item</button>
         </form>
